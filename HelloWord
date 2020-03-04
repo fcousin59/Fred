@@ -1,0 +1,9 @@
+Début algorithme bienvenue à la Wilde
+Variable: Demander  un nombre 
+
+Début de la boucle
+afficher " "Bienvenue à la Wild"
+afficher autant de fois que le chiffre renseigné par la variable
+Fin de la boucle
+
+Fin algorithme "Bienvenue à la Wild"
