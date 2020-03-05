@@ -1,9 +1,10 @@
 Début algorithme bienvenue à la Wilde
-Variable: Demander  un nombre 
+Variable: Demander un nombre  = N
+variable de depart: M
 
-Début de la boucle
-afficher " "Bienvenue à la Wild"
-afficher autant de fois que le chiffre renseigné par la variable
+Début de la boucle 
+Répéter le message autant de fois que N n'est pas atteint, à partir de M
+  afficher " "Bienvenue à la Wild"
 Fin de la boucle
 
 Fin algorithme "Bienvenue à la Wild"
