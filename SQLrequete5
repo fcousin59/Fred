@@ -9,3 +9,18 @@ DROP birthday;
 
 TRUNCATE TABLE wizard;
 
+CREATE TABLE wild_db_quest.player (
+  id INT ,
+  wizard_id INT,
+  role varchar (50),
+  enrollment_date DATE,  
+  primary KEY (id));
+  
+  ALTER TABLE player 
+   ADD FOREIGN KEY (id) REFERENCES wizard (ID);
+   
+   CREATE TABLE wild_db_quest.team (
+	`id` INT,
+	`name` VARCHAR (80),
+	foreign key (id) REFERENCES player (ID)); 
+
