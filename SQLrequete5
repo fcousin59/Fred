@@ -1,1 +1,11 @@
+ALTER TABLE wizard
+DROP birthday;
+
+ALTER TABLE wizard
+DROP birthday;
+
+ALTER TABLE wizard
+DROP birthday;
+
+TRUNCATE TABLE wizard;
 
