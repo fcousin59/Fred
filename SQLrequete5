@@ -1,26 +1,11 @@
-ALTER TABLE wizard
-DROP birthday;
+select `name`, `lastname`, `firstname`, `role`, `team_id`
+from team
+	inner join wizard on team.id=wizard.id
+    inner join player on wizard.id=player.id
+order by team_id asc, lastname asc, role asc;
 
-ALTER TABLE wizard
-DROP birthday;
-
-ALTER TABLE wizard
-DROP birthday;
-
-TRUNCATE TABLE wizard;
-
-CREATE TABLE wild_db_quest.player (
-  id INT ,
-  wizard_id INT,
-  role varchar (50),
-  enrollment_date DATE,  
-  primary KEY (id));
-  
-  ALTER TABLE player 
-   ADD FOREIGN KEY (id) REFERENCES wizard (ID);
-   
-   CREATE TABLE wild_db_quest.team (
-	`id` INT,
-	`name` VARCHAR (80),
-	foreign key (id) REFERENCES player (ID)); 
+select `firstname`,`lastname`, `role`
+from wizard
+inner join player on wizard.id=player.id
+where `role` like 'seeker';
 
