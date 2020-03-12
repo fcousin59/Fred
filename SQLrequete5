@@ -1,8 +1,9 @@
-select `lastname`, `firstname`, `role`, `team_id`, `name`
+use wild_db_quest;
+select `lastname`, `firstname`, `role`, `name`
 from wizard
 	join player on player.wizard_id=wizard.id 
 	join team on player.team_id = team.id
-order by team_id asc, lastname asc;
+order by `name` asc, `role` asc,  `lastname` asc; `firstname`;
 
 select `firstname`,`lastname`, `role`
 from wizard
