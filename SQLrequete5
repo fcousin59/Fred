@@ -1,11 +1,12 @@
-select `name`, `lastname`, `firstname`, `role`, `team_id`
-from team
-	inner join wizard on team.id=wizard.id
-    inner join player on wizard.id=player.id
-order by team_id asc, lastname asc, role asc;
+select `lastname`, `firstname`, `role`, `team_id`, `name`
+from wizard
+	join player on player.wizard_id=wizard.id 
+	join team on player.team_id = team.id
+order by team_id asc, lastname asc;
 
 select `firstname`,`lastname`, `role`
 from wizard
-inner join player on wizard.id=player.id
-where `role` like 'seeker';
+	join player on player.wizard_id=wizard.id
+	where `role` like 'seeker'
+order by lastname asc, firstname asc;
 
