@@ -11,3 +11,8 @@ from wizard
 	where `role` like 'seeker'
 order by lastname asc, firstname asc;
 
+select wizard.id,`lastname`, `team_id`, `role`
+from wizard
+	left join player on player.wizard_id=wizard.id
+    where team_id is null;
+
